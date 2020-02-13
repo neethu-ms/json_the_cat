@@ -5,7 +5,7 @@ const breedFetcher = function(name) {
     const data = JSON.parse(body);
     
    
-    if (!error && response.statusCode === 200 && (body !== '{}' && body !== '[]')) {
+    if (!error && response.statusCode === 200 && body !== '{}' && body !== '[]') {
       console.log(data[0].description);
     } else if (body === '[]') {
       console.log("Data Not Found");
